@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="BalanceBiometric.AuthenticationPage"
+             Title="AuthenticationPage">
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout VerticalOptions="Center" Spacing="30" Padding="{StaticResource LayoutPadding}">
+                <Label 
+                    Text="Welcome to Balance"
+                    Style="{StaticResource Headline}"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                
+                <VerticalStackLayout>
+                    <sf:SfTextInputLayout 
+                        Hint="User ID">
+                        <Entry HeightRequest="30"
+                            x:Name="UsernameEntry"
+                            Text="" />
+                    </sf:SfTextInputLayout>
+
+                    <sf:SfTextInputLayout 
+                        TrailingViewPosition="Inside"
+                        Hint="Password">
+                        <Entry HeightRequest="30" 
+                            x:Name="PasswordEntry"
+                            IsPassword="True" />
+                        <sf:SfTextInputLayout.TrailingView>
+                            <ImageButton
+                                Source="faceid.png"
+                                Aspect="AspectFit"
+                                Padding="8"
+                                HorizontalOptions="End"
+                                Clicked="OnAuthenticate">
+                                <ImageButton.Behaviors>
+                                    <toolkit:IconTintColorBehavior TintColor="White" />
+                                </ImageButton.Behaviors>
+                            </ImageButton>
+                        </sf:SfTextInputLayout.TrailingView>
+                    </sf:SfTextInputLayout>
+                </VerticalStackLayout>                
+
+                <Button 
+                    HeightRequest="{OnIdiom 64, Desktop=60}"
+                    Text="Login" 
+                    Clicked="Login_Clicked" />
+                
+                <Button Background="Transparent"
+                    Clicked="Forgot_Clicked"
+                    Text="Forgot User ID or Password?"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
