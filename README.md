@@ -2,6 +2,8 @@
 
 This sample uses the [.NET MAUI sample ToDo template](https://github.com/dotnet/maui) to showcase using biometric login (FaceID, Fingerprint etc.) with the [Plugin.Fingerprint](https://www.nuget.org/packages/Plugin.Fingerprint) library.
 
+![login screenshot](images/IMG_1300.png)
+
 ## Setup
 
 iOS Info.plist
