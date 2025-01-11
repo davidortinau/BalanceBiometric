@@ -103,11 +103,11 @@
                 Color="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"
                 Size="{StaticResource size240}" />
 
-    <!-- <FontImageSource x:Key="IconFaceId"
-                     Glyph="{x:Static f:FluentUI.authen}"
+    <FontImageSource x:Key="IconFingerprint"
+                     Glyph="{x:Static f:FluentUI.fingerprint_20_regular}"
                      FontFamily="{x:Static f:FluentUI.FontFamily}"
                      Color="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}"
-                     Size="{StaticResource IconSize}" /> -->
+                     Size="{StaticResource IconSize}" />
     
     <Style TargetType="Label">
         <Setter Property="TextColor"

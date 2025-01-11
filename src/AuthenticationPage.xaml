@@ -30,7 +30,8 @@
                             IsPassword="True" />
                         <sf:SfTextInputLayout.TrailingView>
                             <ImageButton
-                                Source="faceid.png"
+                                IsVisible="{OnIdiom True, Desktop=False}"
+                                Source="{OnPlatform iOS=faceid.png, Android={StaticResource IconFingerprint}}"
                                 Aspect="AspectFit"
                                 Padding="8"
                                 HorizontalOptions="End"

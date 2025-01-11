@@ -10,6 +10,11 @@ public partial class AuthenticationPage : ContentPage
 	public AuthenticationPage()
 	{
 		InitializeComponent();
+		var currentTheme = Application.Current!.UserAppTheme;		
+		if(currentTheme != AppTheme.Dark)
+		{
+			Application.Current!.UserAppTheme = AppTheme.Dark;
+		}
 	}
 
 	protected override async void OnAppearing()
